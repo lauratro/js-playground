@@ -37,3 +37,26 @@ console.log(classCabSort[classCabSort.length - 1]);
 for (let i = 0; i < classCabSort.length; i++) {
   console.log(classCabSort[i]);
 }
+// Looping over an Array
+var classAges = [30, 22, 15, 34, 27, 28, 33];
+
+var j = 0;
+
+while (j < classAges.length) {
+  console.log(classAges[j]);
+  j++;
+}
+
+while (j < classAges.length) {
+  if (classAges[j] % 2 == 0) {
+    console.log(classAges[j]);
+  }
+
+  j++;
+}
+var even = [];
+for (var j = 0; j < classAges.length; j++) {
+  if (classAges[j] % 2 == 0) {
+    console.log(classAges[j]);
+  }
+}
