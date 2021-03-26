@@ -60,3 +60,90 @@ for (var j = 0; j < classAges.length; j++) {
     console.log(classAges[j]);
   }
 }
+//Functions
+//Sort the array
+function arraySort(array) {
+  var sortArray = array.sort();
+  console.log("Sorted Array: " + sortArray);
+}
+arraySort(classAges);
+
+//Lowest value in an array
+
+function lowestValueInArray(array) {
+  var lowestValue = array.sort();
+  console.log("the lowest value is " + lowestValue[0]);
+}
+lowestValueInArray(classAges);
+
+//Biggest value in an array
+
+function biggestValueInArray(array) {
+  var biggestArray = array.sort();
+  console.log("The biggest value is " + biggestArray[biggestArray.length - 1]);
+}
+biggestValueInArray(classAges);
+
+// Function with two parameters
+
+var arrayExercise = [
+  3,
+  6,
+  67,
+  6,
+  23,
+  11,
+  100,
+  8,
+  93,
+  0,
+  17,
+  24,
+  7,
+  1,
+  33,
+  45,
+  28,
+  33,
+  23,
+  12,
+  99,
+  100,
+];
+function arrayIndex(array, index) {
+  console.log(array[index]);
+}
+
+//arrayIndex(arrayExercise, 1);
+
+// value is repeted in the array
+function duplicateValueCheck(array) {
+  var sortedArray = array.sort();
+  for (var i = 0; i < sortedArray.length; i++) {
+    if (sortedArray[i] === sortedArray[i + 1]) {
+      console.log(sortedArray[i]);
+    }
+  }
+}
+duplicateValueCheck(arrayExercise);
+
+//Ex. 7 To join in a string
+var output;
+function joinArrayToString(array) {
+  console.log(array.join(" "));
+}
+joinArrayToString(classCab);
+
+//Javascript string
+// ex.1 Reverse a number
+function reverseNumber(num) {
+  var string = num.toString();
+  console.log(string);
+  var numToArray = string.split("").reverse();
+
+  var joined = numToArray.join("");
+
+  console.log(joined);
+}
+
+reverseNumber(25789);
