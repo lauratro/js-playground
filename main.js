@@ -17,3 +17,23 @@ if (age > juliaAge) {
 } else {
   console.log("You have the same age as Julia");
 }
+// Array exercises
+var classCab = [
+  "Laura",
+  "Moe",
+  "Natalia",
+  "Chigar",
+  "Denis",
+  "Oded",
+  "Michelle",
+  "Ottavia",
+  "Lucas",
+];
+console.log(classCab);
+var classCabSort = classCab.sort();
+console.log(classCabSort);
+console.log(classCabSort[0]);
+console.log(classCabSort[classCabSort.length - 1]);
+for (let i = 0; i < classCabSort.length; i++) {
+  console.log(classCabSort[i]);
+}
