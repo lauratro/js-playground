@@ -147,3 +147,35 @@ function reverseNumber(num) {
 }
 
 reverseNumber(25789);
+
+//ex. 2 Alphabetical order
+function alphabeticalOrder(string) {
+  var alpha = string.toLowerCase().split("").sort().join("");
+
+  console.log(alpha);
+}
+alphabeticalOrder("Laura");
+//ex 3. To Capitalize a string
+let sentence;
+function capitalizer(string) {
+  const words = string.split(" ");
+
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    sentence = words.join(" ");
+    console.log(sentence);
+  }
+}
+
+capitalizer("prince of persia");
+
+//Longest word
+var mySentence = "Web Development Tutorial";
+
+function findLongestWord(str) {
+  var longestWord = str.split(" ").sort(function (a, b) {
+    return b.length - a.length;
+  });
+  console.log(longestWord[0]);
+}
+findLongestWord(mySentence);
