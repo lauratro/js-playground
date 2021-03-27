@@ -184,7 +184,7 @@ findLongestWord(mySentence);
 var myBandList = ["Queen", "Creed", "Metallica", "Architect"];
 let ul = document.getElementById("band-list");
 
-function addBands(myBandList) {
+/*function addBands(myBandList) {
   for (var i = 0; i < myBandList.length; i++) {
     var li = document.createElement("li");
     li.setAttribute("class", "list-el");
@@ -192,4 +192,22 @@ function addBands(myBandList) {
     ul.appendChild(li);
   }
 }
-addBands(myBandList);
+addBands(myBandList);*/
+// 2. ex Table
+var table = document.createElement("table");
+var body = document.getElementsByTagName("body")[0].appendChild(table);
+var tbody = document.createElement("tbody");
+table.appendChild(tbody);
+
+function addMultTable(rows, cols) {
+  for (var i = 0; i < rows; i++) {
+    var tr = document.createElement("tr");
+    tbody.appendChild(tr);
+    for (var j = 0; j < cols; j++) {
+      var td = document.createElement("td");
+      tr.appendChild(td);
+    }
+  }
+}
+
+addMultTable(4, 5);
