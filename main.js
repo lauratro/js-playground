@@ -179,3 +179,17 @@ function findLongestWord(str) {
   console.log(longestWord[0]);
 }
 findLongestWord(mySentence);
+
+//DOM Manipulation
+var myBandList = ["Queen", "Creed", "Metallica", "Architect"];
+let ul = document.getElementById("band-list");
+
+function addBands(myBandList) {
+  for (var i = 0; i < myBandList.length; i++) {
+    var li = document.createElement("li");
+    li.setAttribute("class", "list-el");
+    li.innerHTML = myBandList[i];
+    ul.appendChild(li);
+  }
+}
+addBands(myBandList);
