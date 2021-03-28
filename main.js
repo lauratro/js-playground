@@ -182,9 +182,9 @@ findLongestWord(mySentence);
 
 //DOM Manipulation
 var myBandList = ["Queen", "Creed", "Metallica", "Architect"];
-let ul = document.getElementById("band-list");
 
-/*function addBands(myBandList) {
+function addBands(myBandList) {
+  let ul = document.querySelector("#band-list");
   for (var i = 0; i < myBandList.length; i++) {
     var li = document.createElement("li");
     li.setAttribute("class", "list-el");
@@ -192,7 +192,8 @@ let ul = document.getElementById("band-list");
     ul.appendChild(li);
   }
 }
-addBands(myBandList);*/
+addBands(myBandList);
+
 // 2. ex Table
 var table = document.createElement("table");
 var body = document.getElementsByTagName("body")[0].appendChild(table);
@@ -200,7 +201,7 @@ var tbody = document.createElement("tbody");
 table.appendChild(tbody);
 
 function addMultTable(rows, cols) {
-  for (var i = 0; i < rows; i++) {
+  for (var p = 0; p < rows; p++) {
     var tr = document.createElement("tr");
     tbody.appendChild(tr);
     for (var j = 0; j < cols; j++) {
@@ -211,3 +212,41 @@ function addMultTable(rows, cols) {
 }
 
 addMultTable(4, 5);
+
+// Extra Fuction exercises
+function multiplication() {
+  return 5 * 4;
+}
+let result = multiplication();
+console.log(result);
+
+//2. ex Multiplication with parameters
+
+function multiplicationWithParam(num1, num2) {
+  return num1 * num2;
+}
+console.log(multiplicationWithParam(2, 3));
+
+//4. ex Triangles
+function triangles(side1, side2, side3) {
+  if (side1 === side2 && side2 === side3 && side1 === side3) {
+    console.log("Your triangle is equilateral");
+  } else if (side1 === side2 || side2 === side3 || side1 === side3) {
+    console.log("Your triangle is isosceles");
+  } else {
+    console.log("Your triangle is scalene");
+  }
+}
+
+triangles(3, 3, 3);
+triangles(3, 3, 4);
+triangles(3, 5, 6);
+// 5. ex Replace characters
+
+function replaceChar(array) {
+  var string = array.toString("").replaceAll("a", 1).split(",");
+
+  console.log(string);
+}
+
+replaceChar(["j", "a", "v", "a"]);
