@@ -267,15 +267,16 @@ function smallestNumber(array) {
 smallestNumber(myArray);
 
 //7. Even numbers
-let evenNum = [];
 function sumEven(array) {
+  let evenNum = [];
+  let result = [];
   for (var i = 0; i < array.length; i++) {
     if (array[i] % 2 == 0) {
       evenNum.push(array[i]);
-      let result = evenNum.reduce((a, c) => a + c);
-      console.log(result);
+      result = evenNum.reduce((a, c) => a + c);
     }
   }
+  console.log(result);
 }
 sumEven(myArray);
 
@@ -284,13 +285,14 @@ let newArray = [1, 2, 8, 3, 2, 3, 4];
 
 function indexEven(array) {
   let evenIndex = [];
+  let result = [];
   for (var i = 0; i < array.length; i++) {
     if (i % 2 == 0 && i != 0) {
-      console.log(array[i]);
       evenIndex.push(array[i]);
-      let result = evenIndex.reduce((a, c) => a + c);
+      result = evenIndex.reduce((a, c) => a + c);
     }
   }
+  console.log(result);
 }
 indexEven(newArray);
 //9. Even numbers before
