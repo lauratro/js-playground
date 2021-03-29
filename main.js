@@ -214,13 +214,14 @@ function addMultTable(rows, cols) {
 addMultTable(4, 5);
 
 // Extra Fuction exercises
+//1. and 2. exercises
 function multiplication() {
   return 5 * 4;
 }
 let result = multiplication();
 console.log(result);
 
-//2. ex Multiplication with parameters
+//3. ex Multiplication with parameters
 
 function multiplicationWithParam(num1, num2) {
   return num1 * num2;
@@ -250,3 +251,79 @@ function replaceChar(array) {
 }
 
 replaceChar(["j", "a", "v", "a"]);
+
+// 6. Reduce method and sort method
+let myArray = [4, 9, 3, 5, 7, 2];
+function sumTotal(array) {
+  let red = array.reduce((a, c) => a + c);
+  console.log(red);
+}
+sumTotal(myArray);
+
+function smallestNumber(array) {
+  array.sort();
+  console.log(array[0]);
+}
+smallestNumber(myArray);
+
+//7. Even numbers
+let evenNum = [];
+function sumEven(array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] % 2 == 0) {
+      evenNum.push(array[i]);
+      let result = evenNum.reduce((a, c) => a + c);
+      console.log(result);
+    }
+  }
+}
+sumEven(myArray);
+
+//8. Index even
+let newArray = [1, 2, 8, 3, 2, 3, 4];
+
+function indexEven(array) {
+  let evenIndex = [];
+  for (var i = 0; i < array.length; i++) {
+    if (i % 2 == 0 && i != 0) {
+      console.log(array[i]);
+      evenIndex.push(array[i]);
+      let result = evenIndex.reduce((a, c) => a + c);
+    }
+  }
+}
+indexEven(newArray);
+//9. Even numbers before
+function numberBefore(num) {
+  let i = num;
+  while (i > 0) {
+    if (i % 2 == 0) {
+      console.log(i);
+    }
+    i--;
+  }
+}
+numberBefore(9);
+
+//10. Odd between two numbers
+function oddBetween(num1, num2) {
+  if (num1 < num2) {
+    let i = num1;
+    while (i < num2) {
+      if (i % 2 == 1) {
+        console.log(i);
+      }
+      i++;
+    }
+  } else if (num1 > num2) {
+    let i = num2;
+    while (i < num1) {
+      if (i % 2 == 1) {
+        console.log(i);
+      }
+      i++;
+    }
+  }
+}
+
+oddBetween(10, 1);
