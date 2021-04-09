@@ -192,7 +192,9 @@ function addBands(myBandList) {
     ul.appendChild(li);
   }
 }
-addBands(myBandList);
+if (document.title === "Js") {
+  addBands(myBandList);
+}
 
 // 2. ex Table
 var table = document.createElement("table");
@@ -210,8 +212,9 @@ function addMultTable(rows, cols) {
     }
   }
 }
-
-addMultTable(4, 5);
+if (document.title === "table") {
+  addMultTable(4, 5);
+}
 
 // Extra Fuction exercises
 //1. and 2. exercises
