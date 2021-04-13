@@ -117,16 +117,19 @@ function arrayIndex(array, index) {
 //arrayIndex(arrayExercise, 1);
 
 // Ex. 6 value is repeted in the array
-let result = [];
+let result1 = [];
 function duplicateValueCheck(array) {
-  var sortedArray = array.sort(a,b => return a-b);
+  var sortedArray = array.sort((a, b) => a - b);
   for (var i = 0; i < sortedArray.length; i++) {
     if (sortedArray[i] === sortedArray[i + 1]) {
-      if (!result.includes(sortedArray[i])) result.push(sortedArray[i]);
+      if (!result1.includes(sortedArray[i])) {
+        result1.push(sortedArray[i]);
+      }
     }
   }
+  console.log(result1);
 }
-console.log(duplicateValueCheck(arrayExercise));
+duplicateValueCheck(arrayExercise);
 
 //Ex. 7 To join in a string
 var output;
