@@ -116,16 +116,17 @@ function arrayIndex(array, index) {
 
 //arrayIndex(arrayExercise, 1);
 
-// value is repeted in the array
+// Ex. 6 value is repeted in the array
+let result = [];
 function duplicateValueCheck(array) {
-  var sortedArray = array.sort();
+  var sortedArray = array.sort(a,b => return a-b);
   for (var i = 0; i < sortedArray.length; i++) {
     if (sortedArray[i] === sortedArray[i + 1]) {
-      console.log(sortedArray[i]);
+      if (!result.includes(sortedArray[i])) result.push(sortedArray[i]);
     }
   }
 }
-duplicateValueCheck(arrayExercise);
+console.log(duplicateValueCheck(arrayExercise));
 
 //Ex. 7 To join in a string
 var output;
@@ -205,14 +206,18 @@ table.appendChild(tbody);
 function addMultTable(rows, cols) {
   for (var p = 0; p < rows; p++) {
     var tr = document.createElement("tr");
+    tr.style.background = "red";
+
     tbody.appendChild(tr);
     for (var j = 0; j < cols; j++) {
       var td = document.createElement("td");
+      td.style.width = "100px";
+      td.innerHTML = "Hello";
       tr.appendChild(td);
     }
   }
 }
-if (document.title === "table") {
+if (document.title === "Table") {
   addMultTable(4, 5);
 }
 
